@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Merger</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    h2 {
+      color: #333;
+      margin-top: 0;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    #windowList {
+      max-height: 300px;
+      overflow-y: auto;
+      background-color: white;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .window {
+      margin-bottom: 12px;
+      padding: 8px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .window:hover {
+      background-color: #e9e9e9;
+    }
+    .window label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .window input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    #mergeWindows {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    #mergeWindows:hover {
+      background-color: #45a049;
+    }
+    #mergeWindows:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h2>Window Merger</h2>
+  <div id="windowList"></div>
+  <button id="mergeWindows" disabled>Merge Selected Windows</button>
+  <script src="popup.js"></script>
+</body>
+</html>
